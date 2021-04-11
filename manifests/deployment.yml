@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: eduardsorescugsspringbootdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eduardsorescugsspringbootdocker
+  template:
+    metadata:
+      labels:
+        app: eduardsorescugsspringbootdocker 
+    spec:
+      containers:
+        - name: eduardsorescugsspringbootdocker 
+          image: edulimb4.azurecr.io/eduardsorescugsspringbootdocker
+          ports:
+          - containerPort: 80
